@@ -4,7 +4,7 @@
              x:Class="Dotnet8MAUIStudy.Pages.MainMenuPage"
              Title="MainMenuPage">
 
-    <Grid Padding="20" RowSpacing="10" ColumnSpacing="20">
+    <Grid Padding="20" RowSpacing="0" ColumnSpacing="20">
         <!-- 2列のグリッドを作成 -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -13,20 +13,26 @@
             <!-- 右列 -->
         </Grid.ColumnDefinitions>
 
-        <!-- 左の列にボタンを配置 -->
-        <VerticalStackLayout Grid.Column="0" Spacing="15">
-            <Button Text="入力画面" Clicked="OnInputPageButtonClicked" />
-            <Button Text="明細画面 (キー操作)" Clicked="OnDetailPageButtonClicked" />
-            <Button Text="一覧画面" Clicked="OnListPageButtonClicked" />
-        </VerticalStackLayout>
+        <!-- 行の高さを調整 -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <!-- 1行目 (スペースを均等に分配) -->
+            <RowDefinition Height="Auto" />
+            <!-- 2行目 (中央のボタンの高さ) -->
+            <RowDefinition Height="*" />
+            <!-- 3行目 (スペースを均等に分配) -->
+        </Grid.RowDefinitions>
 
-        <!-- 右の列にボタンを配置 -->
-        <VerticalStackLayout Grid.Column="1" Spacing="15">
-            <Button Text="色々なコントロール" Clicked="OnControlsPageButtonClicked" />
-            <Button Text="特殊なボタン" Clicked="OnSpecialButtonPageClicked" />
-            <Button Text="ログアウト" Clicked="OnLogoutButtonClicked" />
-        </VerticalStackLayout>
+        <!-- 左の列にボタンを均等に配置 -->
+        <Button Grid.Column="0" Grid.Row="0" Text="入力画面" VerticalOptions="Start" HeightRequest="70" Clicked="OnInputPageButtonClicked" />
+        <Button Grid.Column="0" Grid.Row="1" Text="明細画面 (キー操作)" VerticalOptions="Center" HeightRequest="70" Clicked="OnDetailPageButtonClicked" />
+        <Button Grid.Column="0" Grid.Row="2" Text="一覧画面" VerticalOptions="End" HeightRequest="70" Clicked="OnListPageButtonClicked" />
+
+        <!-- 右の列にボタンを均等に配置 -->
+        <Button Grid.Column="1" Grid.Row="0" Text="色々なコントロール" VerticalOptions="Start" HeightRequest="70" Clicked="OnControlsPageButtonClicked" />
+        <Button Grid.Column="1" Grid.Row="1" Text="特殊なボタン" VerticalOptions="Center" HeightRequest="70" Clicked="OnSpecialButtonPageClicked" />
+        <Button Grid.Column="1" Grid.Row="2" Text="ログアウト" VerticalOptions="End" HeightRequest="70" Clicked="OnLogoutButtonClicked" />
+
     </Grid>
 
 </ContentPage>
-    
