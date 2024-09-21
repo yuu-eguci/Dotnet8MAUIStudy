@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dotnet8MAUIStudy.Pages.MainMenuPage"
+             Title="MainMenuPage">
+
+    <Grid Padding="20" RowSpacing="10" ColumnSpacing="20">
+        <!-- 2列のグリッドを作成 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <!-- 左列 -->
+            <ColumnDefinition Width="*" />
+            <!-- 右列 -->
+        </Grid.ColumnDefinitions>
+
+        <!-- 左の列にボタンを配置 -->
+        <VerticalStackLayout Grid.Column="0" Spacing="15">
+            <Button Text="入力画面" Clicked="OnInputPageButtonClicked" />
+            <Button Text="明細画面 (キー操作)" Clicked="OnDetailPageButtonClicked" />
+            <Button Text="一覧画面" Clicked="OnListPageButtonClicked" />
+        </VerticalStackLayout>
+
+        <!-- 右の列にボタンを配置 -->
+        <VerticalStackLayout Grid.Column="1" Spacing="15">
+            <Button Text="色々なコントロール" Clicked="OnControlsPageButtonClicked" />
+            <Button Text="特殊なボタン" Clicked="OnSpecialButtonPageClicked" />
+            <Button Text="ログアウト" Clicked="OnLogoutButtonClicked" />
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
+    

@@ -7,7 +7,7 @@ public partial class LoginPage : ContentPage
         InitializeComponent();
     }
 
-    private void OnLoginButtonClicked(object sender, EventArgs e)
+    private async void OnLoginButtonClicked(object sender, EventArgs e)
     {
         string userId = UserIdEntry.Text;
         string password = PasswordEntry.Text;
@@ -15,12 +15,15 @@ public partial class LoginPage : ContentPage
         // ここでログイン処理を実装
         if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(password))
         {
-            DisplayAlert("エラー", "ユーザーIDまたはパスワードを入力してください", "OK");
+            await DisplayAlert("エラー", "ユーザーIDまたはパスワードを入力してください", "OK");
         }
         else
         {
             // 仮のログイン成功処理
-            DisplayAlert("ログイン成功", $"ようこそ、{userId}さん！", "OK");
+            await DisplayAlert("ログイン成功", $"ようこそ、{userId}さん！", "OK");
+
+            // MainMenuPage へ遷移します。
+            await Shell.Current.GoToAsync(nameof(MainMenuPage));
         }
     }
 }
