@@ -8,10 +8,12 @@ public partial class MainMenuPage : ContentPage
     }
 
     // 入力画面ボタンが押されたときの処理
-    private void OnInputPageButtonClicked(object sender, EventArgs e)
+    private async void OnInputPageButtonClicked(object sender, EventArgs e)
     {
-        DisplayAlert("入力画面", "入力画面が押されました", "OK");
-        // 必要であれば、ページ遷移や処理を追加
+        await DisplayAlert("入力画面", "入力画面が押されました", "OK");
+
+        // 相対的なナビゲーションで、ナビゲーションスタックはクリアされず、次のページがスタックに追加される。
+        await Shell.Current.GoToAsync(nameof(SampleInputPage));
     }
 
     // 明細画面 (キー操作) ボタンが押されたときの処理
@@ -48,7 +50,8 @@ public partial class MainMenuPage : ContentPage
             // ログアウト処理（必要に応じて追加）
 
             // LoginPage への遷移
-            await Shell.Current.GoToAsync("//LoginPage");
+            // 絶対的なナビゲーション。ナビゲーションスタックをリセットする。
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
     }
 }
