@@ -21,9 +21,10 @@ public partial class MainMenuPage : ContentPage
     }
 
     // 一覧画面ボタンが押されたときの処理
-    private void OnListPageButtonClicked(object sender, EventArgs e)
+    private async void OnListPageButtonClicked(object sender, EventArgs e)
     {
-        DisplayAlert("一覧画面", "一覧画面が押されました", "OK");
+        // 相対的なナビゲーションで、ナビゲーションスタックはクリアされず、次のページがスタックに追加される。
+        await Shell.Current.GoToAsync(nameof(SampleTablePage));
     }
 
     // 色々なコントロールボタンが押されたときの処理
