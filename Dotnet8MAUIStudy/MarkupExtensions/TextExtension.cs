@@ -9,7 +9,7 @@ namespace Dotnet8MAUIStudy.MarkupExtensions
     //       そのため、IMarkupExtension<T> を使って、 xaml から参照できるようにしているというわけ。
     public class TextExtension : IMarkupExtension<string>
     {
-        public string Key { get; set; }
+        public required string Key { get; set; }
 
         public string ProvideValue(IServiceProvider serviceProvider)
         {
