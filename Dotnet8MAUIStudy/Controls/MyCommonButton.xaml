@@ -7,5 +7,7 @@
             TextColor="White"
             FontAttributes="Bold"
             HeightRequest="70"
-            CornerRadius="10" />
+            CornerRadius="10"
+            Pressed="OnButtonPressed"
+            Released="OnButtonReleased" />
 </ContentView>
