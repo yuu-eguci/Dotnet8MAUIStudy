@@ -23,7 +23,8 @@ public partial class LoginPage : ContentPage
             await DisplayAlert("ログイン成功", $"ようこそ、{userId}さん！", "OK");
 
             // MainMenuPage へ遷移します。
-            await Shell.Current.GoToAsync(nameof(MainMenuPage));
+            // ここではルートページ間の絶対ナビゲーションなので `///` です。
+            await Shell.Current.GoToAsync($"///{nameof(MainMenuPage)}");
         }
     }
 }

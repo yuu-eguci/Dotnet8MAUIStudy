@@ -10,8 +10,6 @@ public partial class MainMenuPage : ContentPage
     // 入力画面ボタンが押されたときの処理
     private async void OnInputPageButtonClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("入力画面", "入力画面が押されました", "OK");
-
         // 相対的なナビゲーションで、ナビゲーションスタックはクリアされず、次のページがスタックに追加される。
         await Shell.Current.GoToAsync(nameof(SampleInputPage));
     }
@@ -51,6 +49,7 @@ public partial class MainMenuPage : ContentPage
 
             // LoginPage への遷移
             // 絶対的なナビゲーション。ナビゲーションスタックをリセットする。
+            // ここではルートページへ絶対ナビゲーションなので `//` です。
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
     }
