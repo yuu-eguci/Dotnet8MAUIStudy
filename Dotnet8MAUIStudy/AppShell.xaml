@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Dotnet8MAUIStudy.Pages"
     Shell.FlyoutBehavior="Disabled"
-    Title="Dotnet8MAUIStudy">
+    Title=".NET 8 MAUI Study App 2024-09-22">
     <!-- xmlns:local で Pages の namespace を指定しています。 -->
 
     <!--
