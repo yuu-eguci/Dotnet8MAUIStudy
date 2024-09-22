@@ -8,9 +8,26 @@
     Title="Dotnet8MAUIStudy">
     <!-- xmlns:local で Pages の namespace を指定しています。 -->
 
+    <!--
+        NOTE: 前提 ページを登録することをルーティングという。 (設定のこと)
+              実際に GoToAsync とかで移動することをナビゲーションという。 (操作のこと)
+        NOTE: この AppShell.xaml にShellContent としてルーティング定義するのは、
+              スタックのトップ (ルート) として使いたいもの。
+              ルート間 (ShellContent -> ShellContent) は
+              `GoToAsync("///MainMenuPage")` みたいな感じで移動する。
+              一方、ルートから遷移していくページのことは AppShell.xaml.cs の中で登録する。
+    -->
+
+    <!-- LoginPage を ShellContent に追加 -->
     <ShellContent
         Title="Login"
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" />
+
+    <!-- MainMenuPage を ShellContent に追加 -->
+    <ShellContent
+        Title="Main Menu"
+        ContentTemplate="{DataTemplate local:MainMenuPage}"
+        Route="MainMenuPage" />
 
 </Shell>
