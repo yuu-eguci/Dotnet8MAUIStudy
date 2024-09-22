@@ -11,13 +11,16 @@ public partial class VariousControlsPage : ContentPage
     private void OnChangeTitleClicked(object sender, EventArgs e)
     {
         // ウィンドウタイトルを変更
-        this.Title = "タイトルが変更されました";
+        this.Title = Helpers.TextConstants.GetText("タイトルが変更されました");
     }
 
     // メッセージボックスボタンが押されたときの処理
     private async void OnShowMessageBoxClicked(object sender, EventArgs e)
     {
         // メッセージボックスを表示
-        await DisplayAlert("メッセージ", "これはメッセージボックスです", "OK");
+        await DisplayAlert(
+            Helpers.TextConstants.GetText("メッセージ"),
+            Helpers.TextConstants.GetText("これはメッセージボックスです"),
+            Helpers.TextConstants.GetText("OK"));
     }
 }

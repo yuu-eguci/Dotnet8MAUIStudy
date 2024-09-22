@@ -15,12 +15,18 @@ public partial class LoginPage : ContentPage
         // ここでログイン処理を実装
         if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(password))
         {
-            await DisplayAlert("エラー", "ユーザーIDまたはパスワードを入力してください", "OK");
+            await DisplayAlert(
+                Helpers.TextConstants.GetText("エラー"),
+                Helpers.TextConstants.GetText("ユーザーIDまたはパスワードを入力してください"),
+                Helpers.TextConstants.GetText("OK"));
         }
         else
         {
             // 仮のログイン成功処理
-            await DisplayAlert("ログイン成功", $"ようこそ、{userId}さん！", "OK");
+            await DisplayAlert(
+                Helpers.TextConstants.GetText("ログイン成功"),
+                $"ようこそ、{userId}さん！",
+                Helpers.TextConstants.GetText("OK"));
 
             // MainMenuPage へ遷移します。
             // ここではルートページ間の絶対ナビゲーションなので `///` です。

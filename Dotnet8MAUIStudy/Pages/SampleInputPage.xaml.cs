@@ -11,7 +11,10 @@ public partial class SampleInputPage : ContentPage
     private async void OnRegisterButtonClicked(object sender, EventArgs e)
     {
         // 仮の登録処理
-        await DisplayAlert("登録完了", "登録が完了しました！", "OK");
+        await DisplayAlert(
+            Helpers.TextConstants.GetText("登録完了"),
+            Helpers.TextConstants.GetText("登録が完了しました！"),
+            Helpers.TextConstants.GetText("OK"));
 
         // Current.GoToAsync で遷移すると、前に進む感じになっちゃう。
         // ここは戻りたいから、 PopAsync を使う。

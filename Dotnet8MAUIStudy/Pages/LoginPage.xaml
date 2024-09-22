@@ -2,21 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
+             xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Pages.LoginPage"
              Title="LoginPage">
 
     <VerticalStackLayout Padding="30" Spacing="20">
 
         <!-- ユーザーID の入力 -->
-        <Label Text="ユーザーID" />
-        <Entry x:Name="UserIdEntry" Placeholder="ユーザーIDを入力してください" />
+        <Label Text="{text:TextExtension Key='ユーザーID'}" />
+        <Entry x:Name="UserIdEntry" Placeholder="{text:TextExtension Key='ユーザーIDを入力してください'}" />
 
         <!-- パスワードの入力 -->
         <Label Text="パスワード" />
-        <Entry x:Name="PasswordEntry" Placeholder="パスワードを入力してください" IsPassword="True" />
+        <Entry x:Name="PasswordEntry" Placeholder="{text:TextExtension Key='パスワードを入力してください'}" IsPassword="True" />
 
         <!-- ログインボタン -->
-        <controls:MyCommonButton Text="ログイン" Clicked="OnLoginButtonClicked" />
+        <controls:MyCommonButton Text="{text:TextExtension Key='ログイン'}" Clicked="OnLoginButtonClicked" />
 
     </VerticalStackLayout>
 

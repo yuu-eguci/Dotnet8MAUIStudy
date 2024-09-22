@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
+             xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Pages.SampleInputPage"
              Title="SampleInputPage">
 
@@ -13,31 +14,31 @@
             <controls:MyCommonBackLink />
 
             <!-- 製品コード -->
-            <Label Text="製品コード" />
-            <Entry Placeholder="製品コードを入力" />
+            <Label Text="{text:TextExtension Key='製品コード'}" />
+            <Entry Placeholder="{text:TextExtension Key='製品コードを入力'}" />
 
             <!-- 製品名 -->
-            <Label Text="製品名" />
-            <Entry Placeholder="製品名を入力" />
+            <Label Text="{text:TextExtension Key='製品名'}" />
+            <Entry Placeholder="{text:TextExtension Key='製品名を入力'}" />
 
             <!-- 受注日 -->
-            <Label Text="受注日" />
+            <Label Text="{text:TextExtension Key='受注日'}" />
             <DatePicker />
 
             <!-- 単価 -->
-            <Label Text="単価" />
-            <Entry Placeholder="単価を入力" Keyboard="Numeric" />
+            <Label Text="{text:TextExtension Key='単価'}" />
+            <Entry Placeholder="{text:TextExtension Key='単価を入力'}" Keyboard="Numeric" />
 
             <!-- 数量 -->
-            <Label Text="数量" />
-            <Entry Placeholder="数量を入力" Keyboard="Numeric" />
+            <Label Text="{text:TextExtension Key='数量'}" />
+            <Entry Placeholder="{text:TextExtension Key='数量を入力'}" Keyboard="Numeric" />
 
             <!-- 金額 -->
-            <Label Text="金額" />
-            <Entry Placeholder="金額を入力" Keyboard="Numeric" />
+            <Label Text="{text:TextExtension Key='金額'}" />
+            <Entry Placeholder="{text:TextExtension Key='金額を入力'}" Keyboard="Numeric" />
 
             <!-- 登録ボタン (MyCommonButtonを使用) -->
-            <controls:MyCommonButton Text="登録" Clicked="OnRegisterButtonClicked" />
+            <controls:MyCommonButton Text="{text:TextExtension Key='登録'}" Clicked="OnRegisterButtonClicked" />
 
         </VerticalStackLayout>
     </ScrollView>

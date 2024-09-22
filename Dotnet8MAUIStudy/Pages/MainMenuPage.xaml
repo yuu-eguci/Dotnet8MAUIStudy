@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
+             xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Pages.MainMenuPage"
              Title="MainMenuPage">
     <!-- xmlns:controls でコントロールの namespace を登録。 -->
@@ -26,14 +27,14 @@
         </Grid.RowDefinitions>
 
         <!-- 左の列にボタンを均等に配置 -->
-        <controls:MyCommonButton Grid.Column="0" Grid.Row="0" Text="入力画面" Clicked="OnInputPageButtonClicked" />
-        <controls:MyCommonButton Grid.Column="0" Grid.Row="1" Text="明細画面 (キー操作)" Clicked="OnDetailPageButtonClicked" />
-        <controls:MyCommonButton Grid.Column="0" Grid.Row="2" Text="一覧画面" Clicked="OnListPageButtonClicked" />
+        <controls:MyCommonButton Grid.Column="0" Grid.Row="0" Text="{text:TextExtension Key='入力画面'}" Clicked="OnInputPageButtonClicked" />
+        <controls:MyCommonButton Grid.Column="0" Grid.Row="1" Text="{text:TextExtension Key='明細画面 (キー操作)'}" Clicked="OnDetailPageButtonClicked" />
+        <controls:MyCommonButton Grid.Column="0" Grid.Row="2" Text="{text:TextExtension Key='一覧画面'}" Clicked="OnListPageButtonClicked" />
 
         <!-- 右の列にボタンを均等に配置 -->
-        <controls:MyCommonButton Grid.Column="1" Grid.Row="0" Text="色々なコントロール" Clicked="OnControlsPageButtonClicked" />
-        <controls:MyCommonButton Grid.Column="1" Grid.Row="1" Text="特殊なボタン" Clicked="OnSpecialButtonPageClicked" />
-        <controls:MyCommonButton Grid.Column="1" Grid.Row="2" Text="ログアウト" Clicked="OnLogoutButtonClicked" />
+        <controls:MyCommonButton Grid.Column="1" Grid.Row="0" Text="{text:TextExtension Key='色々なコントロール'}" Clicked="OnControlsPageButtonClicked" />
+        <controls:MyCommonButton Grid.Column="1" Grid.Row="1" Text="{text:TextExtension Key='特殊なボタン'}" Clicked="OnSpecialButtonPageClicked" />
+        <controls:MyCommonButton Grid.Column="1" Grid.Row="2" Text="{text:TextExtension Key='ログアウト'}" Clicked="OnLogoutButtonClicked" />
     </Grid>
 
 </ContentPage>

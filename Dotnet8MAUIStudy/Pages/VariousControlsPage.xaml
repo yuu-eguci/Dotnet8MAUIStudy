@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
+             xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Pages.VariousControlsPage"
              Title="VariousControlsPage">
 
@@ -12,7 +13,7 @@
             <controls:MyCommonBackLink />
 
             <!-- コンボボックス -->
-            <Label Text="コンボボックス" />
+            <Label Text="{text:TextExtension Key='コンボボックス'}" />
             <Picker x:Name="comboBox" Title="選択してください">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -24,42 +25,42 @@
             </Picker>
 
             <!-- チェックボックス -->
-            <Label Text="チェックボックス" />
+            <Label Text="{text:TextExtension Key='チェックボックス'}" />
             <HorizontalStackLayout Spacing="20">
                 <HorizontalStackLayout>
                     <CheckBox x:Name="checkBox1" />
-                    <Label Text="チェックボックス1" />
+                    <Label Text="{text:TextExtension Key='チェックボックス1'}" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <CheckBox x:Name="checkBox2" />
-                    <Label Text="チェックボックス2" />
+                    <Label Text="{text:TextExtension Key='チェックボックス2'}" />
                 </HorizontalStackLayout>
             </HorizontalStackLayout>
 
             <!-- ラジオボタン -->
-            <Label Text="ラジオボタン" />
+            <Label Text="{text:TextExtension Key='ラジオボタン'}" />
             <HorizontalStackLayout Spacing="20">
                 <RadioButton GroupName="RadioGroup" Content="ラジオボタン1" />
                 <RadioButton GroupName="RadioGroup" Content="ラジオボタン2" />
             </HorizontalStackLayout>
 
             <!-- ツリー構造 -->
-            <Label Text="ツリー (準備中)" />
+            <Label Text="{text:TextExtension Key='ツリー (準備中)'}" />
             <VerticalStackLayout>
-                <Label Text="- ツリー1" />
-                <Label Text="   - ツリー1-1" />
-                <Label Text="- ツリー2" />
-                <Label Text="   - ツリー2-1" />
+                <Label Text="{text:TextExtension Key='- ツリー1'}" />
+                <Label Text="{text:TextExtension Key='   - ツリー1-1'}" />
+                <Label Text="{text:TextExtension Key='- ツリー2'}" />
+                <Label Text="{text:TextExtension Key='   - ツリー2-1'}" />
             </VerticalStackLayout>
 
             <!-- ボタンを横並びに配置 -->
             <HorizontalStackLayout Spacing="20">
                 <!-- ウィンドウタイトル変更ボタン -->
-                <controls:MyCommonButton Text="ウィンドウタイトル変更" Clicked="OnChangeTitleClicked" />
+                <controls:MyCommonButton Text="{text:TextExtension Key='ウィンドウタイトル変更'}" Clicked="OnChangeTitleClicked" />
 
                 <!-- メッセージボックス表示ボタン -->
-                <controls:MyCommonButton Text="メッセージボックス" Clicked="OnShowMessageBoxClicked" />
+                <controls:MyCommonButton Text="{text:TextExtension Key='メッセージボックス'}" Clicked="OnShowMessageBoxClicked" />
             </HorizontalStackLayout>
 
         </VerticalStackLayout>
