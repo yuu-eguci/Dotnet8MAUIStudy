@@ -1,7 +1,20 @@
 .NET 8 MAUI Study
 ===
 
+## Visual Studio 2022 の開発ってどういうやつだっけ?
+
+- Visual Studio 2022 はクソエディタなので、 Parallels 側の Visual Studio 2022 ではビルドのみ行う
+- Windows 側のファイルを Mac 側の Visual Studio Code で編集する
+- ただ、ファイルとかフォルダの Add は Windows 側でやっとこう
+
 ## MAUI って何だっけ?
+
+このクソフレームワークは、 Parallels を使っている場合、 Windows 側の C ドライブ以下にプロジェクトを作る必要がある。
+Mac 側の共有フォルダに置いておくと、ビルドができない。こんなエラーになる↓
+
+```
+The project needs to be deployed before we can debug, please enable Deploy in the Configuration Manager.
+```
 
 ![Architecture diagram](./docs/architecture-diagram.png)
 
