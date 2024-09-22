@@ -3,7 +3,7 @@
 
 ## MAUI って何だっけ?
 
-![Architecture diagram](./architecture-diagram.png)
+![Architecture diagram](./docs/architecture-diagram.png)
 
 > https://learn.microsoft.com/ja-jp/dotnet/maui/what-is-maui?view=net-maui-8.0 より
 
