@@ -28,9 +28,10 @@ public partial class MainMenuPage : ContentPage
     }
 
     // 色々なコントロールボタンが押されたときの処理
-    private void OnControlsPageButtonClicked(object sender, EventArgs e)
+    private async void OnControlsPageButtonClicked(object sender, EventArgs e)
     {
-        DisplayAlert("色々なコントロール", "色々なコントロールが押されました", "OK");
+        // 相対的なナビゲーションで、ナビゲーションスタックはクリアされず、次のページがスタックに追加される。
+        await Shell.Current.GoToAsync(nameof(VariousControlsPage));
     }
 
     // 特殊なボタンが押されたときの処理
