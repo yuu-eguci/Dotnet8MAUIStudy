@@ -1,12 +1,67 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
              x:Class="Dotnet8MAUIStudy.Pages.VariousControlsPage"
              Title="VariousControlsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- 戻るリンク -->
+            <controls:MyCommonBackLink />
+
+            <!-- コンボボックス -->
+            <Label Text="コンボボックス" />
+            <Picker x:Name="comboBox" Title="選択してください">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Foo</x:String>
+                        <x:String>Bar</x:String>
+                        <x:String>Baz</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- チェックボックス -->
+            <Label Text="チェックボックス" />
+            <HorizontalStackLayout Spacing="20">
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="checkBox1" />
+                    <Label Text="チェックボックス1" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="checkBox2" />
+                    <Label Text="チェックボックス2" />
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+
+            <!-- ラジオボタン -->
+            <Label Text="ラジオボタン" />
+            <HorizontalStackLayout Spacing="20">
+                <RadioButton GroupName="RadioGroup" Content="ラジオボタン1" />
+                <RadioButton GroupName="RadioGroup" Content="ラジオボタン2" />
+            </HorizontalStackLayout>
+
+            <!-- ツリー構造 -->
+            <Label Text="ツリー (準備中)" />
+            <VerticalStackLayout>
+                <Label Text="- ツリー1" />
+                <Label Text="   - ツリー1-1" />
+                <Label Text="- ツリー2" />
+                <Label Text="   - ツリー2-1" />
+            </VerticalStackLayout>
+
+            <!-- ボタンを横並びに配置 -->
+            <HorizontalStackLayout Spacing="20">
+                <!-- ウィンドウタイトル変更ボタン -->
+                <controls:MyCommonButton Text="ウィンドウタイトル変更" Clicked="OnChangeTitleClicked" />
+
+                <!-- メッセージボックス表示ボタン -->
+                <controls:MyCommonButton Text="メッセージボックス" Clicked="OnShowMessageBoxClicked" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
