@@ -4,7 +4,7 @@
              xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
              xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Pages.VariousControlsPage"
-             Title="VariousControlsPage">
+             Title="{text:TextExtension Key='色々なコントロール・ページ'}">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">

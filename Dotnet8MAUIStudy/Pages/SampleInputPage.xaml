@@ -4,7 +4,7 @@
              xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
              xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Pages.SampleInputPage"
-             Title="SampleInputPage">
+             Title="{text:TextExtension Key='受注入力・ページ'}">
 
     <!-- スクロールビューを追加 -->
     <ScrollView>

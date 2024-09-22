@@ -4,7 +4,7 @@
              xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
              xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Pages.LoginPage"
-             Title="LoginPage">
+             Title="{text:TextExtension Key='ログイン・ページ'}">
 
     <VerticalStackLayout Padding="30" Spacing="20">
 
