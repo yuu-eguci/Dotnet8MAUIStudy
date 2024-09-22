@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
              x:Class="Dotnet8MAUIStudy.Pages.SampleTablePage"
              Title="SampleTablePage">
 
@@ -13,7 +14,36 @@
                     HorizontalOptions="Start" Clicked="OnBackToMainMenuClicked" />
 
             <!-- 印刷ボタン -->
-            <Button Text="印刷" Clicked="OnPrintButtonClicked" />
+            <controls:MyCommonButton Text="印刷" Clicked="OnPrintButtonClicked" />
+
+            <!-- Table Header -->
+            <Frame CornerRadius="0" Padding="0" HasShadow="False" BackgroundColor="AliceBlue">
+                <Grid ColumnDefinitions="*,*,*,*,*,*" HorizontalOptions="FillAndExpand" Padding="0,10,0,10">
+                    <Label Text="製品コード" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Center" />
+                    <Label Text="製品名" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="Center" />
+                    <Label Text="受注日" FontAttributes="Bold" Grid.Column="2" HorizontalOptions="Center" />
+                    <Label Text="単価" FontAttributes="Bold" Grid.Column="3" HorizontalOptions="Center" />
+                    <Label Text="数量" FontAttributes="Bold" Grid.Column="4" HorizontalOptions="Center" />
+                    <Label Text="金額" FontAttributes="Bold" Grid.Column="5" HorizontalOptions="Center" />
+                </Grid>
+            </Frame>
+
+            <!-- データをバインディングする CollectionView -->
+            <CollectionView ItemsSource="{Binding Products}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!-- Frame で Grid をラップしてボーダーをつける -->
+                            <Grid ColumnDefinitions="*,*,*,*,*,*" Padding="10,10,10,10">
+                                <Label Text="{Binding ProductCode}" Grid.Column="0" HorizontalOptions="Center" />
+                                <Label Text="{Binding ProductName}" Grid.Column="1" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+                                <Label Text="{Binding OrderDate}" Grid.Column="2" HorizontalOptions="Center" />
+                                <Label Text="{Binding UnitPrice}" Grid.Column="3" HorizontalOptions="Center" />
+                                <Label Text="{Binding Quantity}" Grid.Column="4" HorizontalOptions="Center" />
+                                <Label Text="{Binding Amount}" Grid.Column="5" HorizontalOptions="Center" />
+                            </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </VerticalStackLayout>
     </ScrollView>
