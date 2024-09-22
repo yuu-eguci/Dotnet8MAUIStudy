@@ -10,8 +10,7 @@
         <VerticalStackLayout Padding="20" Spacing="15">
 
             <!-- 戻るリンク -->
-            <Button Text="← 戻る" BackgroundColor="Transparent" TextColor="Blue" 
-                    HorizontalOptions="Start" Clicked="OnBackToMainMenuClicked" />
+            <controls:MyCommonBackLink />
 
             <!-- 印刷ボタン -->
             <controls:MyCommonButton Text="印刷" Clicked="OnPrintButtonClicked" />

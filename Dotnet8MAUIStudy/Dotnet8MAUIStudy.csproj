@@ -63,6 +63,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\MyCommonBackLink.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controls\MyCommonButton.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

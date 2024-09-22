@@ -10,8 +10,7 @@
         <VerticalStackLayout Padding="20" Spacing="15">
 
             <!-- 戻るリンク -->
-            <Button Text="← 戻る" BackgroundColor="Transparent" TextColor="Blue" 
-                    HorizontalOptions="Start" Clicked="OnBackToMainMenuClicked" />
+            <controls:MyCommonBackLink />
 
             <!-- 製品コード -->
             <Label Text="製品コード" />

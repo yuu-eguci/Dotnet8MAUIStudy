@@ -7,14 +7,6 @@ public partial class SampleInputPage : ContentPage
 		InitializeComponent();
 	}
 
-    // 戻るリンクが押されたときの処理
-    private async void OnBackToMainMenuClicked(object sender, EventArgs e)
-    {
-        // Current.GoToAsync で遷移すると、前に進む感じになっちゃう。
-        // ここは戻りたいから、 PopAsync を使う。
-        await Shell.Current.Navigation.PopAsync();
-    }
-
     // 登録ボタンが押されたときの処理
     private async void OnRegisterButtonClicked(object sender, EventArgs e)
     {
