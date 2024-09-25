@@ -14,12 +14,14 @@
             <controls:MyCommonBackLink />
 
             <!-- 製品コード -->
-            <Label Text="{text:TextExtension Key='製品コード'}" />
-            <Entry Placeholder="{text:TextExtension Key='製品コードを入力'}" />
+            <Label Text="{text:TextExtension Key='製品コード (0001, 0002 or 0003)'}" />
+            <Entry x:Name="ProductCodeEntry"
+                   Placeholder="{text:TextExtension Key='製品コードを入力'}"
+                   TextChanged="OnProductCodeChanged" />
 
             <!-- 製品名 -->
             <Label Text="{text:TextExtension Key='製品名'}" />
-            <Entry Placeholder="{text:TextExtension Key='製品名を入力'}" />
+            <Entry x:Name="ProductNameEntry" Placeholder="{text:TextExtension Key='製品名を入力'}" />
 
             <!-- 受注日 -->
             <Label Text="{text:TextExtension Key='受注日'}" />
@@ -27,7 +29,9 @@
 
             <!-- 単価 -->
             <Label Text="{text:TextExtension Key='単価'}" />
-            <Entry Placeholder="{text:TextExtension Key='単価を入力'}" Keyboard="Numeric" />
+            <Entry x:Name="UnitPriceEntry"
+                   Placeholder="{text:TextExtension Key='単価を入力'}"
+                   Keyboard="Numeric" />
 
             <!-- 数量 -->
             <Label Text="{text:TextExtension Key='数量'}" />
