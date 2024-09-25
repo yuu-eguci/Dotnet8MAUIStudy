@@ -9,9 +9,9 @@ public partial class SampleTablePage : ContentPage
         // 仮のデータを追加
         var products = new List<Product>
         {
-            new() { ProductCode = "0001", ProductName = Helpers.TextConstants.GetText("Power Automate Desktop 入門講座"), OrderDate = "2024-09-14", UnitPrice = "10,000", Quantity = "1", Amount = "10,000" },
-            new() { ProductCode = "0002", ProductName = Helpers.TextConstants.GetText("Power Automate Desktop 勉強会"), OrderDate = "2024-09-15", UnitPrice = "300,000", Quantity = "2", Amount = "450,000" },
-            new() { ProductCode = "0003", ProductName = Helpers.TextConstants.GetText("Power Automate Desktop カレッジ"), OrderDate = "2024-09-17", UnitPrice = "500,000", Quantity = "1", Amount = "500,000" }
+            new() { ProductCode = "0001", ProductName = Helpers.TextConstants.GetText("みかん"), OrderDate = "2024-09-14", UnitPrice = "10,000", Quantity = "1", Amount = "10,000" },
+            new() { ProductCode = "0002", ProductName = Helpers.TextConstants.GetText("デコポン"), OrderDate = "2024-09-15", UnitPrice = "300,000", Quantity = "2", Amount = "450,000" },
+            new() { ProductCode = "0003", ProductName = Helpers.TextConstants.GetText("甘夏"), OrderDate = "2024-09-17", UnitPrice = "500,000", Quantity = "1", Amount = "500,000" }
         };
 
         // BindingContext にデータをセット
