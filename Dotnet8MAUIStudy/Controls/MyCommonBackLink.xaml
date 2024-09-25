@@ -4,6 +4,5 @@
              xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Controls.MyCommonBackLink">
     <Button Text="{text:TextExtension Key='← 戻る'}" BackgroundColor="Transparent" TextColor="Blue"
-            HorizontalOptions="Start" Clicked="OnBackToMainMenuClicked"
-            AutomationProperties.Name="Back Button" />
+            HorizontalOptions="Start" Clicked="OnBackToMainMenuClicked" />
 </ContentView>
