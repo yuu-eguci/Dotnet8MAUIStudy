@@ -6,6 +6,7 @@
 - Visual Studio 2022 はクソエディタなので、 Parallels 側の Visual Studio 2022 ではビルドのみ行う
 - Windows 側のファイルを Mac 側の Visual Studio Code で編集する
 - ただ、ファイルとかフォルダの Add は Windows 側でやっとこう
+- 最終的にビルドすると思うんだけど、使えるフォルダは `publish` だよ
 
 ## MAUI って何だっけ?
 
