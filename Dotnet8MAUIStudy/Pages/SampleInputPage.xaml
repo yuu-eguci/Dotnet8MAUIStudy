@@ -35,11 +35,11 @@
 
             <!-- 数量 -->
             <Label Text="{text:TextExtension Key='数量'}" />
-            <Entry Placeholder="{text:TextExtension Key='数量を入力'}" Keyboard="Numeric" />
+            <Entry x:Name="QuantityEntry" Placeholder="{text:TextExtension Key='数量を入力'}" Keyboard="Numeric" />
 
             <!-- 金額 -->
             <Label Text="{text:TextExtension Key='金額'}" />
-            <Entry Placeholder="{text:TextExtension Key='金額を入力'}" Keyboard="Numeric" />
+            <Entry x:Name="AmountEntry" Placeholder="{text:TextExtension Key='金額を入力'}" Keyboard="Numeric" IsReadOnly="True" />
 
             <!-- 登録ボタン (MyCommonButtonを使用) -->
             <controls:MyCommonButton Text="{text:TextExtension Key='登録'}" Clicked="OnRegisterButtonClicked" />
