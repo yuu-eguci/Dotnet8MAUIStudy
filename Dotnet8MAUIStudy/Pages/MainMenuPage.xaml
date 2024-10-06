@@ -28,14 +28,20 @@
         </Grid.RowDefinitions>
 
         <!-- 左の列にボタンを均等に配置 -->
-        <controls:MyCommonButton Grid.Column="0" Grid.Row="0" Text="{text:TextExtension Key='入力画面'}" Clicked="OnInputPageButtonClicked" />
-        <controls:MyCommonButton Grid.Column="0" Grid.Row="1" Text="{text:TextExtension Key='明細画面 (キー操作)'}" Clicked="OnDetailPageButtonClicked" />
-        <controls:MyCommonButton Grid.Column="0" Grid.Row="2" Text="{text:TextExtension Key='一覧画面'}" Clicked="OnListPageButtonClicked" />
+        <controls:MyCommonImageButton Grid.Column="0" Grid.Row="0" Text="{text:TextExtension Key='入力画面'}" Clicked="OnInputPageButtonClicked"
+                                      ButtonBackgroundImageSource="bg_city.jpg" />
+        <controls:MyCommonImageButton Grid.Column="0" Grid.Row="1" Text="{text:TextExtension Key='明細画面 (キー操作)'}" Clicked="OnDetailPageButtonClicked"
+                                      ButtonBackgroundImageSource="bg_countryside.jpg" />
+        <controls:MyCommonImageButton Grid.Column="0" Grid.Row="2" Text="{text:TextExtension Key='一覧画面'}" Clicked="OnListPageButtonClicked"
+                                      ButtonBackgroundImageSource="bg_seaside.jpg" />
 
         <!-- 右の列にボタンを均等に配置 -->
-        <controls:MyCommonButton Grid.Column="1" Grid.Row="0" Text="{text:TextExtension Key='色々なコントロール'}" Clicked="OnControlsPageButtonClicked" />
-        <controls:MyCommonButton Grid.Column="1" Grid.Row="1" Text="{text:TextExtension Key='特殊なボタン'}" Clicked="OnSpecialButtonPageClicked" />
-        <controls:MyCommonButton Grid.Column="1" Grid.Row="2" Text="{text:TextExtension Key='ログアウト'}" Clicked="OnLogoutButtonClicked" />
+        <controls:MyCommonImageButton Grid.Column="1" Grid.Row="0" Text="{text:TextExtension Key='色々なコントロール'}" Clicked="OnControlsPageButtonClicked"
+                                      ButtonBackgroundImageSource="bg_trees.jpg" />
+        <controls:MyCommonImageButton Grid.Column="1" Grid.Row="1" Text="{text:TextExtension Key='特殊なボタン'}" Clicked="OnSpecialButtonPageClicked"
+                                      ButtonBackgroundImageSource="bg_nightsky.jpg" />
+        <controls:MyCommonImageButton Grid.Column="1" Grid.Row="2" Text="{text:TextExtension Key='ログアウト'}" Clicked="OnLogoutButtonClicked"
+                                      ButtonBackgroundImageSource="bg_waving.jpg" />
     </Grid>
 
 </ContentPage>
