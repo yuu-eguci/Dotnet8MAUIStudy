@@ -1,3 +1,6 @@
+// デバイス情報を取得するために Microsoft.Maui.Devices 名前空間を使用。
+using Microsoft.Maui.Devices;
+
 namespace Dotnet8MAUIStudy.Pages;
 
 public partial class SampleTablePage : ContentPage
@@ -21,10 +24,21 @@ public partial class SampleTablePage : ContentPage
     // 印刷ボタンが押されたときの処理
     private async void OnPrintButtonClicked(object sender, EventArgs e)
     {
-        // 仮の印刷処理
+        string message;
+
+        // Windows プラットフォームの判定。
+        if (DeviceInfo.Platform == DevicePlatform.WinUI)
+        {
+            message = Helpers.TextConstants.GetText("OK!");
+        }
+        else
+        {
+            message = Helpers.TextConstants.GetText("このプラットフォームは印刷機能のサポート外です");
+        }
+
         await DisplayAlert(
             Helpers.TextConstants.GetText("印刷"),
-            Helpers.TextConstants.GetText("印刷処理が実行されました！"),
+            message,
             Helpers.TextConstants.GetText("OK"));
     }
 }
