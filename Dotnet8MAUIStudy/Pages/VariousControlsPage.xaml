@@ -9,6 +9,12 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
 
+            <!-- 画像の追加 -->
+            <Image Source="bg_trees.jpg"
+                   Aspect="AspectFill"
+                   HeightRequest="150"
+                   HorizontalOptions="FillAndExpand" />
+
             <!-- 戻るリンク -->
             <controls:MyCommonBackLink />
 
