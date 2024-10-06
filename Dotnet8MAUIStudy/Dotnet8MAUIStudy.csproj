@@ -67,10 +67,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Controls\MyCommonImageButton.xaml.cs">
+	    <DependentUpon>MyCommonImageButton.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Controls\MyCommonBackLink.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Controls\MyCommonButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Controls\MyCommonImageButton.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\LoginPage.xaml">
