@@ -4,7 +4,8 @@
              xmlns:controls="clr-namespace:Dotnet8MAUIStudy.Controls"
              xmlns:text="clr-namespace:Dotnet8MAUIStudy.MarkupExtensions"
              x:Class="Dotnet8MAUIStudy.Pages.MainMenuPage"
-             Title="{text:TextExtension Key='メニュー・ページ'}">
+             Title="{text:TextExtension Key='メニュー・ページ'}"
+             BackgroundImageSource="bg_waterpainting.jpg">
     <!-- xmlns:controls でコントロールの namespace を登録。 -->
 
     <Grid Padding="20" RowSpacing="0" ColumnSpacing="20">
